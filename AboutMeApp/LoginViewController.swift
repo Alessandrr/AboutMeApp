@@ -16,11 +16,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var forgotNameButton: UIButton!
     
     //MARK: - Override functions
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -37,6 +32,7 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: "login", sender: nil)
         } else {
             showAlert(withTitle: "Invalid login or password", message: "Please, enter a correct combination")
+            self.passwordTF.text?.removeAll()
         }
     }
     
@@ -59,16 +55,13 @@ class LoginViewController: UIViewController {
         usernameTF.text == "User" && passwordTF.text == "admin" ? true : false
     }
     
-    
 }
 
 //MARK: - Extensions
 extension LoginViewController {
     func showAlert(withTitle title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTF.text?.removeAll()
-        }
+        let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
