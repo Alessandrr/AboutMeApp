@@ -13,6 +13,7 @@
 		2244A20D2A120F4500820F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2244A20B2A120F4500820F06 /* Main.storyboard */; };
 		2244A20F2A120F4900820F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2244A20E2A120F4900820F06 /* Assets.xcassets */; };
 		2244A2122A120F4900820F06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2244A2102A120F4900820F06 /* LaunchScreen.storyboard */; };
+		2244A21A2A12168A00820F06 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2244A2192A12168900820F06 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2244A20E2A120F4900820F06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2244A2112A120F4900820F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2244A2132A120F4900820F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2244A2192A12168900820F06 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2244A2052A120F4500820F06 /* AppDelegate.swift */,
 				2244A2072A120F4500820F06 /* SceneDelegate.swift */,
 				2244A2092A120F4500820F06 /* LoginViewController.swift */,
+				2244A2192A12168900820F06 /* WelcomeViewController.swift */,
 				2244A20B2A120F4500820F06 /* Main.storyboard */,
 				2244A20E2A120F4900820F06 /* Assets.xcassets */,
 				2244A2102A120F4900820F06 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2244A20A2A120F4500820F06 /* LoginViewController.swift in Sources */,
+				2244A21A2A12168A00820F06 /* WelcomeViewController.swift in Sources */,
 				2244A2062A120F4500820F06 /* AppDelegate.swift in Sources */,
 				2244A2082A120F4500820F06 /* SceneDelegate.swift in Sources */,
 			);
