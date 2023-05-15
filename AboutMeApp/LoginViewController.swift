@@ -22,8 +22,8 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard usernameTF.text == "User" else { return }
-        guard passwordTF.text == "admin" else { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = usernameTF.text 
     }
 
     @IBAction func loginButtonPressed() {
@@ -32,6 +32,11 @@ class LoginViewController: UIViewController {
         } else {
             showAlert(withTitle: "Error", message: "Wrong login or password")
         }
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        usernameTF.text?.removeAll()
+        passwordTF.text?.removeAll()
     }
     
     private func isLoginOk() -> Bool {
