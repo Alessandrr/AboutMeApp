@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: "login", sender: nil)
         } else {
             showAlert(withTitle: "Invalid login or password", message: "Please, enter a correct combination")
-            self.passwordTF.text?.removeAll()
+            passwordTF.text?.removeAll()
         }
     }
     
