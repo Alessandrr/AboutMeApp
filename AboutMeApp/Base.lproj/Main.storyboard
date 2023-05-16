@@ -51,7 +51,7 @@
                                                     <action selector="forgotDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vac-e1-Mf6"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-Y9-2ta">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-Y9-2ta">
                                                 <rect key="frame" x="144" y="0.0" width="144" height="27.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
@@ -75,7 +75,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgotNameButton" destination="RKs-AT-BwF" id="QC8-Rt-HfD"/>
                         <outlet property="passwordTF" destination="2gS-Go-rdv" id="sKS-pD-QiU"/>
                         <outlet property="usernameTF" destination="s0Z-mX-dwu" id="T56-Io-77a"/>
                         <segue destination="gzf-YT-l88" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="20N-0T-XUV"/>

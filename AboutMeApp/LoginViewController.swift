@@ -13,8 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    @IBOutlet var forgotNameButton: UIButton!
-    
     //MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -42,8 +40,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotDataPressed(_ sender: UIButton) {
-        switch sender {
-        case forgotNameButton:
+        switch sender.tag {
+        case 0:
             showAlert(withTitle: "Hint", message: "Username is User")
         default:
             showAlert(withTitle: "Hint", message: "Password is admin")
