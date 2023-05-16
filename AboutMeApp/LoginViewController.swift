@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Private functions
     private func isLoginOk() -> Bool {
-        usernameTF.text == "User" && passwordTF.text == "admin" ? true : false
+        usernameTF.text == "User" && passwordTF.text == "admin"
     }
     
 }
