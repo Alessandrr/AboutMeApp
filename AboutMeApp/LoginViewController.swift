@@ -32,8 +32,11 @@ class LoginViewController: UIViewController {
         if isLoginOk() {
             performSegue(withIdentifier: "login", sender: nil)
         } else {
-            showAlert(withTitle: "Invalid login or password", message: "Please, enter a correct combination")
-            passwordTF.text?.removeAll()
+            showAlert(
+                withTitle: "Invalid login or password",
+                message: "Please, enter a correct combination",
+                textField: passwordTF
+            )
         }
     }
     
@@ -43,12 +46,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotDataPressed(_ sender: UIButton) {
-        switch sender.tag {
-        case 0:
-            showAlert(withTitle: "Hint", message: "Username is \(user)")
-        default:
-            showAlert(withTitle: "Hint", message: "Password is \(password)")
-        }
+        sender.tag == 0
+            ? showAlert(withTitle: "Hint", message: "Username is \(user)")
+            : showAlert(withTitle: "Hint", message: "Password is \(password)")
     }
     
     // MARK: - Private functions
@@ -60,9 +60,11 @@ class LoginViewController: UIViewController {
 
 //MARK: - Extensions
 extension LoginViewController {
-    func showAlert(withTitle title: String, message: String) {
+    func showAlert(withTitle title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text?.removeAll()
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
