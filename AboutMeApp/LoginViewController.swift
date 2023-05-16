@@ -13,6 +13,9 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    private let user = "User"
+    private let password = "admin"
+    
     //MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -42,15 +45,15 @@ class LoginViewController: UIViewController {
     @IBAction func forgotDataPressed(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            showAlert(withTitle: "Hint", message: "Username is User")
+            showAlert(withTitle: "Hint", message: "Username is \(user)")
         default:
-            showAlert(withTitle: "Hint", message: "Password is admin")
+            showAlert(withTitle: "Hint", message: "Password is \(password)")
         }
     }
     
     // MARK: - Private functions
     private func isLoginOk() -> Bool {
-        usernameTF.text == "User" && passwordTF.text == "admin"
+        usernameTF.text == user && passwordTF.text == password
     }
     
 }
