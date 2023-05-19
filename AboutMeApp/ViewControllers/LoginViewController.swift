@@ -7,14 +7,14 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "User"
-    private let password = "admin"
+    private let user = User.getUser()
     
     //MARK: - Override functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -23,8 +23,19 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = usernameTF.text 
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user.person.fullName
+            } else if let navigationVC = viewController as? UINavigationController {
+                if let infoVC = navigationVC.topViewController {
+                    infoVC.navigationItem.title = user.person.fullName
+                }
+            }
+        }
+        
     }
     
     //MARK: - IBActions
@@ -47,13 +58,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotDataPressed(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(withTitle: "Hint", message: "Username is \(user)")
-            : showAlert(withTitle: "Hint", message: "Password is \(password)")
+        ? showAlert(withTitle: "Hint", message: "Username is \(user.login)")
+        : showAlert(withTitle: "Hint", message: "Password is \(user.password)")
     }
     
     // MARK: - Private functions
     private func isLoginOk() -> Bool {
-        usernameTF.text == user && passwordTF.text == password
+        usernameTF.text == user.login && passwordTF.text == user.password
     }
     
 }
