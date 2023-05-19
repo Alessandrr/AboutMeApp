@@ -147,12 +147,25 @@
         <!--Title-->
         <scene sceneID="m4R-gk-MCa">
             <objects>
-                <viewController id="JKv-cN-7FZ" sceneMemberID="viewController">
+                <viewController id="JKv-cN-7FZ" customClass="ProfileViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="phv-ad-l3N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BioPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="AfY-a0-t0U">
+                                <rect key="frame" x="80" y="112.5" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AfY-a0-t0U" secondAttribute="height" multiplier="1:1" id="vrw-ah-CFU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8uX-6u-APH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AfY-a0-t0U" firstAttribute="width" secondItem="phv-ad-l3N" secondAttribute="width" multiplier="0.5" id="FM3-lb-J5T"/>
+                            <constraint firstItem="AfY-a0-t0U" firstAttribute="top" secondItem="8uX-6u-APH" secondAttribute="top" constant="20" id="caC-OT-LFp"/>
+                            <constraint firstItem="AfY-a0-t0U" firstAttribute="centerX" secondItem="phv-ad-l3N" secondAttribute="centerX" id="ezR-LL-INa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="CcD-Dl-XNW">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="Zae-qS-pib">
@@ -161,6 +174,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioPhotoView" destination="AfY-a0-t0U" id="O6p-ZV-XAW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQn-BY-DV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,6 +238,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BioPhoto" width="3024" height="4032"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
