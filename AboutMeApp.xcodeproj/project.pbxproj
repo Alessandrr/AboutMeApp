@@ -16,6 +16,7 @@
 		2244A21A2A12168A00820F06 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2244A2192A12168900820F06 /* WelcomeViewController.swift */; };
 		2261652E2A17A8DF00107C88 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261652D2A17A8DF00107C88 /* User.swift */; };
 		22D2131E2A17C61B00056A11 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2131D2A17C61B00056A11 /* ProfileViewController.swift */; };
+		22D213202A1AB46F00056A11 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2131F2A1AB46F00056A11 /* BioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2244A2192A12168900820F06 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2261652D2A17A8DF00107C88 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22D2131D2A17C61B00056A11 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		22D2131F2A1AB46F00056A11 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				2244A2092A120F4500820F06 /* LoginViewController.swift */,
 				2244A2192A12168900820F06 /* WelcomeViewController.swift */,
 				22D2131D2A17C61B00056A11 /* ProfileViewController.swift */,
+				22D2131F2A1AB46F00056A11 /* BioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D213202A1AB46F00056A11 /* BioViewController.swift in Sources */,
 				22D2131E2A17C61B00056A11 /* ProfileViewController.swift in Sources */,
 				2244A20A2A120F4500820F06 /* LoginViewController.swift in Sources */,
 				2244A21A2A12168A00820F06 /* WelcomeViewController.swift in Sources */,

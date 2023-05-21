@@ -17,7 +17,18 @@ struct User {
         return User(
             login: "User",
             password: "admin",
-            person: Person(firstName: "Sasha", secondName: "Mamlygo")
+            person: Person(
+                firstName: "Sasha",
+                secondName: "Mamlygo",
+                country: "Armenia",
+                company: "Manychat",
+                department: "Finance",
+                bio: """
+                A lot of text
+                More text
+                Even more text
+                """
+            )
         )
     }
 }
@@ -27,6 +38,10 @@ struct User {
 struct Person {
     let firstName: String
     let secondName: String
+    let country: String
+    let company: String
+    let department: String
+    let bio: String
     
     var fullName: String {
         firstName + " " + secondName

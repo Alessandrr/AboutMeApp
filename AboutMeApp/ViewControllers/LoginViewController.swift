@@ -28,14 +28,14 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.person.fullName
+                welcomeVC.personName = user.person.fullName
             } else if let navigationVC = viewController as? UINavigationController {
-                if let infoVC = navigationVC.topViewController {
-                    infoVC.navigationItem.title = user.person.fullName
+                if let profileVC = navigationVC.topViewController as? ProfileViewController {
+                    profileVC.navigationItem.title = user.person.fullName
+                    profileVC.person = user.person
                 }
             }
         }
-        
     }
     
     //MARK: - IBActions
