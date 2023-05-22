@@ -20,13 +20,16 @@ struct User {
             person: Person(
                 firstName: "Sasha",
                 lastName: "Mamlygo",
+                age: 21,
                 country: "Armenia",
                 company: "Manychat",
                 department: "Finance",
                 bio: """
-                A lot of text
-                More text
-                Even more text
+                Привет! Я Саша, учился в Питере на менеджменте, работал в налоговом консалтинге, \
+                уехал не закончив вуз и за 2022 успел пожить в Армении, в Турции, и снова в Армении. Окончательно вернулся \
+                в Армению работать в Manychat. У вас на канале даже есть интервью с нашим lead iOS \
+                разработичком)) Пока не очень спешу уходить из финансов, но уже понимаю что разиваться в разработке тоже \
+                было бы крайне интересно
                 """
             )
         )
@@ -38,6 +41,7 @@ struct User {
 struct Person {
     let firstName: String
     let lastName: String
+    let age: Int
     let country: String
     let company: String
     let department: String

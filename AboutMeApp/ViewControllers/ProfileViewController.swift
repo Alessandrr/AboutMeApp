@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var lastNameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var companyLabel: UILabel!
     @IBOutlet var departmentLabel: UILabel!
@@ -24,7 +25,8 @@ class ProfileViewController: UIViewController {
         
         nameLabel.text = "Name: \(person.firstName)"
         lastNameLabel.text = "Last name : \(person.lastName)"
-        countryLabel.text = "Contry: \(person.country)"
+        ageLabel.text = "Age: \(person.age)"
+        countryLabel.text = "Country: \(person.country)"
         companyLabel.text = "Company: \(person.company)"
         departmentLabel.text = "Department: \(person.department)"
     }
