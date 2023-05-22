@@ -31,7 +31,6 @@ class LoginViewController: UIViewController {
                 welcomeVC.personName = user.person.fullName
             } else if let navigationVC = viewController as? UINavigationController {
                 if let profileVC = navigationVC.topViewController as? ProfileViewController {
-                    profileVC.navigationItem.title = user.person.fullName
                     profileVC.person = user.person
                 }
             }

@@ -13,12 +13,20 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var lastNameLabel: UILabel!
+    @IBOutlet var countryLabel: UILabel!
+    @IBOutlet var companyLabel: UILabel!
+    @IBOutlet var departmentLabel: UILabel!
     
     var person: Person!
     
     override func viewDidLoad() {
+        self.navigationItem.title = person.fullName
+        
         nameLabel.text = "Name: \(person.firstName)"
-        lastNameLabel.text = "Last name : \(person.secondName)"
+        lastNameLabel.text = "Last name : \(person.lastName)"
+        countryLabel.text = "Contry: \(person.country)"
+        companyLabel.text = "Company: \(person.company)"
+        departmentLabel.text = "Department: \(person.department)"
     }
     
     override func viewDidLayoutSubviews() {

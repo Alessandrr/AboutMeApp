@@ -19,7 +19,7 @@ struct User {
             password: "admin",
             person: Person(
                 firstName: "Sasha",
-                secondName: "Mamlygo",
+                lastName: "Mamlygo",
                 country: "Armenia",
                 company: "Manychat",
                 department: "Finance",
@@ -37,14 +37,15 @@ struct User {
 
 struct Person {
     let firstName: String
-    let secondName: String
+    let lastName: String
     let country: String
     let company: String
     let department: String
+    
     let bio: String
     
     var fullName: String {
-        firstName + " " + secondName
+        firstName + " " + lastName
     }    
 }
 

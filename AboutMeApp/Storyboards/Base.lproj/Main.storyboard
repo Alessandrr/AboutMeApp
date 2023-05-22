@@ -214,6 +214,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bioPhotoView" destination="AfY-a0-t0U" id="O6p-ZV-XAW"/>
+                        <outlet property="companyLabel" destination="nOf-0c-Q9B" id="km3-nJ-VQk"/>
+                        <outlet property="countryLabel" destination="AId-me-8Zz" id="6gP-3n-bYC"/>
+                        <outlet property="departmentLabel" destination="v8y-Yc-5vF" id="PIa-34-nS8"/>
                         <outlet property="lastNameLabel" destination="Q7C-qH-Zd8" id="C0z-gA-5Jq"/>
                         <outlet property="nameLabel" destination="hBm-zK-EsM" id="LUj-kM-seH"/>
                     </connections>
@@ -280,7 +283,7 @@
                     <tabBarItem key="tabBarItem" title="Bio" image="person" catalog="system" id="8Xg-tE-hoY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="42t-Yj-QRt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
