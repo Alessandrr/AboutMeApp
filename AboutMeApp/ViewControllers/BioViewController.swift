@@ -14,6 +14,7 @@ class BioViewController: UIViewController {
     var personBio: String!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         personBioLabel.text = personBio
     }
     

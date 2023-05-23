@@ -21,14 +21,9 @@ class ProfileViewController: UIViewController {
     var person: Person!
     
     override func viewDidLoad() {
-        self.navigationItem.title = person.fullName
-        
-        nameLabel.text = "Name: \(person.firstName)"
-        lastNameLabel.text = "Last name : \(person.lastName)"
-        ageLabel.text = "Age: \(person.age)"
-        countryLabel.text = "Country: \(person.country)"
-        companyLabel.text = "Company: \(person.company)"
-        departmentLabel.text = "Department: \(person.department)"
+        super.viewDidLoad()
+        navigationItem.title = person.fullName
+        setupBioLabels()
     }
     
     override func viewDidLayoutSubviews() {
@@ -39,5 +34,14 @@ class ProfileViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let bioVC = segue.destination as? BioViewController else { return }
         bioVC.personBio = person.bio
+    }
+    
+    private func setupBioLabels() {
+        nameLabel.text = "Name: \(person.firstName)"
+        lastNameLabel.text = "Last name : \(person.lastName)"
+        ageLabel.text = "Age: \(person.age)"
+        countryLabel.text = "Country: \(person.country)"
+        companyLabel.text = "Company: \(person.company)"
+        departmentLabel.text = "Department: \(person.department)"
     }
 }
