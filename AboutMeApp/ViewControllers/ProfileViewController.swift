@@ -20,10 +20,14 @@ class ProfileViewController: UIViewController {
     
     var person: Person!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func extractedFunc() {
         navigationItem.title = person.fullName
         setupBioLabels()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        extractedFunc()
     }
     
     override func viewDidLayoutSubviews() {
